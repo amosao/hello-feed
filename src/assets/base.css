@@ -91,10 +91,19 @@ body {
     margin-left: 5px;
 }
 
+.ml-auto {
+    margin-left: auto;
+}
+
 .flex {
     display: flex;
 }
 
 .w-fit {
     width: fit-content;
+}
+
+.sm-icon {
+    height: 18px;
+    width: 18px;
 }

@@ -2,6 +2,8 @@
     import type { PropType } from 'vue';
     import type { PostItem } from '../interfaces/PostItem'
     import IconLike from './icons/IconLike.vue';
+    import IconShare from './icons/IconShare.vue';
+    import IconSave from './icons/IconSave.vue';
     
     const props = defineProps({
         post: Object as PropType<PostItem>
@@ -10,6 +12,16 @@
 
 <template>
     <li class="post-card" :style='{backgroundImage: `url(src/assets/images/${props.post?.pictureUrl})`}'>
+
+        <div class="actions">
+            <span class="button ml-auto" tooltip="Save">
+                <IconSave class="sm-icon" />
+            </span>
+
+            <span class="button" tooltip="Share">
+                <IconShare class="sm-icon" />
+            </span>
+        </div>
 
         <div class="tags">
             <span class="tag" v-for="tag in props.post?.tags">
@@ -57,6 +69,42 @@
         background-color: aqua;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 0.5rem;
+    }
+
+    .actions .button {
+        position: relative;
+        padding: 0 9px;
+        display: inline-flex;
+        align-items: center;
+        background-color: #42b883;
+        border-radius: 50%;
+        color: black;
+        width: 36px;
+        height: 36px;
+        transition: width 300ms ease-in-out 0s, border-radius 300ms linear 200ms;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .actions .button:hover {
+        border-radius: 5px;
+        width: 142px;
+        transition: width 300ms ease-in-out 0s, border-radius 300ms linear 200ms;
+    }
+
+    .actions .button:after {
+        content: attr(tooltip);
+        position: absolute;
+        margin: 0.6rem 0 0 3.5rem;
+        width: fit-content;
+        animation: fadeIn 600ms linear forwards;
     }
 
     .tags {
