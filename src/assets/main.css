@@ -1,0 +1,83 @@
+@import './base.css';
+
+:root {
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    padding: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: gray;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #42b883;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+#app {
+    top: 0;
+    padding: 0 1rem 0 1rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+#feeds-container {
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: 0;
+}
+
+#notifications {
+    overflow-y: auto;
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        place-items: center;
+    }
+
+    #app {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    #feeds-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #feeds-container {
+        border-right: solid 2px #252525;
+    }
+}
+
+@media (max-width: 1023px) {
+    #notifications {
+        display: none;
+    }
+}
