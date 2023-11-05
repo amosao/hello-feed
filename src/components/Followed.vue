@@ -3,8 +3,16 @@ import type { PostItem } from '@/interfaces/PostItem';
 
 const posts: PostItem[] = [
     {
+        description: "Coding my first ever Vue project!",
+        author: "Amosão",
+        likes: 2,
+        pictureUrl: "amosao-post.jpg",
+        published: "Aug 17, 2023",
+        type: 1
+    },
+    {
         title: "Chapter #1096 discussion",
-        sneakpeek: "Luffy is tired after facing Kizaru and the marines are coming for the mugiwara crew with full power!",
+        description: "Luffy is tired after facing Kizaru and the marines are coming for the mugiwara crew with full power!",
         author: "OpexOFC",
         likes: 146,
         pictureUrl: "one-piece-banner.jpe",
@@ -13,7 +21,7 @@ const posts: PostItem[] = [
     },
     {
         title: "Unity biggest mistake!",
-        sneakpeek: "The consequences of Unity's terrible decisions.",
+        description: "The consequences of Unity's terrible decisions.",
         author: "Game Engineers",
         likes: 549,
         pictureUrl: "unity-banner.jpg",
@@ -22,7 +30,7 @@ const posts: PostItem[] = [
     },
     {
         title: "Baldur's Gate 3 \"New standarts\" ",
-        sneakpeek: "What are AAA game studios afraid after the release of Baldur's Gate 3.",
+        description: "What are AAA game studios afraid after the release of Baldur's Gate 3.",
         author: "Game Engineers",
         likes: 983,
         pictureUrl: "bg3-banner.jpg",
@@ -31,7 +39,7 @@ const posts: PostItem[] = [
     },
     {
         title: "Is The Withcer still worth playing?.",
-        sneakpeek: "A brief discussion about the first game of The Witcher trilogy.",
+        description: "A brief discussion about the first game of The Witcher trilogy.",
         author: "Worth Classics",
         likes: 504,
         pictureUrl: "witcher-Banner.jpg",
@@ -43,7 +51,7 @@ const posts: PostItem[] = [
 const forYou: PostItem[] = [
     {
         title: "The future of Jujutsu Kaisen",
-        sneakpeek: "What are the expectations for the upcoming season?",
+        description: "What are the expectations for the upcoming season?",
         author: "OtakuNation",
         likes: 283,
         pictureUrl: "jujutsu-kaisen-banner.jpg",
@@ -52,7 +60,7 @@ const forYou: PostItem[] = [
     },
     {
         title: "What now? Episode 15: Blizzard",
-        sneakpeek: "Today, a in-depth discussion about the current situation on Activision Blizzard and the future of the company and games.",
+        description: "Today, a in-depth discussion about the current situation on Activision Blizzard and the future of the company and games.",
         author: "Game News",
         likes: 152,
         pictureUrl: "blizzard-banner.jpg",
@@ -61,7 +69,7 @@ const forYou: PostItem[] = [
     },
     {
         title: "Lunacid, a hidden gem.",
-        sneakpeek: "A great indie first-person dungeon crawler that excels in every aspect of the genre.",
+        description: "A great indie first-person dungeon crawler that excels in every aspect of the genre.",
         author: "Indie Nation",
         likes: 699,
         pictureUrl: "lunacid-banner.jpg",
